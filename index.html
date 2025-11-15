@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uji Kompetensi Web Pratama</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">My Website</a>
+
+            <button 
+                id="toggleThemeBtn" 
+                class="btn btn-warning ms-auto">
+                Ubah Tema
+            </button>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+
+        <!-- Judul -->
+        <header class="text-center">
+            <h1 class="fw-bold mb-3">Welcome To My Website</h1>
+            <p class="lead mb-5">Ini adalah website sederhana yang menerapkan HTML, CSS, JavaScript, Bootstrap, dan jQuery dengan elemen gambar, dan video.</p>
+        </header>
+
+        <!-- Media -->
+        <section class="mb-5">
+
+            <div class="d-flex flex-wrap justify-content-center gap-4 align-items-start">
+                <!-- Card Gambar -->
+                <div class="card shadow-sm card-gambar">
+                    <img id="gambar" src="assets/media/gambar1.jpg" alt="Gambar Ilustrasi" class="card-img-top object-fit-cover">
+                    <div class="card-body">
+                        <p>Gambar ilustrasi</p>
+                        <button id="ubahGambarBtn" class="btn btn-success w-100">Ubah Gambar</button>
+                    </div>
+                </div>
+
+                <!-- Card Video -->
+                <div class="card shadow-sm card-video">
+                    <div class="ratio ratio-16x9">
+                        <video controls class="card-img-top">
+                            <source src="assets/media/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Video ilustrasi.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-1 fw-semibold">Pengembangan Web Pratama</p>
+            <p class="small mb-1">
+                &copy; 2025 Naufal Faisa |
+                <a href="https://github.com/naufalfaisa" target="_blank" class="text-decoration-none">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
