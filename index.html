@@ -12,8 +12,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">My Website</a>
+            <a class="navbar-brand fw-bold" href="#">PWP</a>
 
+            <!-- Tombol Ganti Tema -->
             <button 
                 id="toggleThemeBtn" 
                 class="btn btn-warning ms-auto">
@@ -27,13 +28,12 @@
         <!-- Judul -->
         <header class="text-center">
             <h1 class="fw-bold mb-3">Welcome To My Website</h1>
-            <p class="lead mb-5">Ini adalah website sederhana yang menerapkan HTML, CSS, JavaScript, Bootstrap, dan jQuery dengan elemen gambar, dan video.</p>
+            <p class="lead mb-5">Ini adalah website sederhana yang menerapkan HTML, CSS, JavaScript, Bootstrap, dan jQuery dengan elemen gambar, dan video, juga menyediakan beberapa interaksi untuk pengguna.</p>
         </header>
 
         <!-- Media -->
         <section class="mb-5">
-
-            <div class="d-flex flex-wrap justify-content-center gap-4 align-items-start">
+            <div class="d-flex flex-column gap-4 align-items-center">
                 <!-- Card Gambar -->
                 <div class="card shadow-sm card-gambar">
                     <img id="gambar" src="assets/media/gambar1.jpg" alt="Gambar Ilustrasi" class="card-img-top object-fit-cover">
@@ -55,6 +55,36 @@
                     </div>
                 </div>
 
+                <!-- Card Audio -->
+                <div class="card shadow-sm card-audio">
+                    <div class="pt-3 px-3">
+                        <audio controls src="assets/media/audio.mp3" style="width:100%;"></audio>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Contoh Audio.</p>
+                    </div>
+                </div>
+
+                <!-- Kalkulator -->
+                <div class="card shadow-sm p-3 card-kalkulator" style="width:30rem;">
+                    <h5 class="mb-3">Kalkulator Sederhana</h5>
+                    <div class="mb-2">
+                        <input type="number" id="angka1" class="form-control" placeholder="Angka 1">
+                    </div>
+                    <div class="mb-2">
+                        <input type="number" id="angka2" class="form-control" placeholder="Angka 2">
+                    </div>
+                    <div class="mb-2">
+                        <select id="operator" class="form-select">
+                            <option value="+">Tambah (+)</option>
+                            <option value="-">Kurang (-)</option>
+                            <option value="*">Kali (*)</option>
+                            <option value="/">Bagi (/)</option>
+                        </select>
+                    </div>
+                    <button id="hitungBtn" class="btn btn-danger w-100 mb-2">Hitung</button>
+                    <p>Hasil: <span id="hasil">0</span></p>
+                </div>
             </div>
         </section>
 

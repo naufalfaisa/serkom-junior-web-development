@@ -10,11 +10,30 @@ body {
     aspect-ratio: 1 / 1;
 }
 
-.card-gambar {
-    width: 20rem;
+.card {
+    width: 30rem;
+}
+
+/* .card-gambar {
+    width: 30rem;
 }
 
 .card-video {
     width: 30rem;
 }
+
+.card-audio {
+    width: 30rem;
+}
+
+.card-audio audio {
+    width: 100%;
+}
+
+.card-kalkulator {
+    width: 30rem;
+} */
+
+
+
 

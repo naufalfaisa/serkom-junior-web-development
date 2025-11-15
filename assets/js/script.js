@@ -1,40 +1,52 @@
 // Tunggu sampai halaman selesai dimuat
 $(document).ready(function() {
 
-    const gambar = $('#gambar');                // gambar di card
-    const tombolGambar = $('#ubahGambarBtn');   // tombol untuk ganti gambar
-    const tombolTema = $('#toggleThemeBtn');    // tombol untuk ganti tema
-    const body = $('body');                     // seluruh body halaman
-    const cards = $('.card');                   // semua card
-
-    // Daftar gambar yang bisa diganti
+    let indeksGambar = 0;
     const daftarGambar = [
         'assets/media/gambar1.jpg',
         'assets/media/gambar2.jpg',
         'assets/media/gambar3.jpg'
     ];
 
-    // Indeks gambar saat ini
-    let indeksGambar = 0;
-
     // Fungsi untuk ganti gambar
     function gantiGambar() {
-        indeksGambar++;  // tambah 1
-        if (indeksGambar >= daftarGambar.length) {
-            indeksGambar = 0;  // kembali ke gambar pertama jika sudah akhir
-        }
-        gambar.attr('src', daftarGambar[indeksGambar]); // ubah src gambar
+        indeksGambar++;
+        if (indeksGambar >= daftarGambar.length) indeksGambar = 0;
+        $('#gambar').attr('src', daftarGambar[indeksGambar]);
         console.log('Gambar sekarang:', daftarGambar[indeksGambar]);
     }
 
     // Fungsi untuk ganti tema
     function gantiTema() {
-        body.toggleClass('bg-black text-light');  // ubah background dan teks body
-        cards.toggleClass('bg-dark text-light');  // ubah background dan teks card
+        $('body').toggleClass('bg-black text-light');
+        $('.card').toggleClass('bg-dark text-light');
         console.log('Tema halaman diganti');
     }
 
     // Pasang event klik ke tombol
-    tombolGambar.on('click', gantiGambar);
-    tombolTema.on('click', gantiTema);
+    $('#ubahGambarBtn').on('click', gantiGambar);
+    $('#toggleThemeBtn').on('click', gantiTema);
+
+    // --- Kalkulator Sederhana ---
+    $('#hitungBtn').on('click', function() {
+        const a = parseFloat($('#angka1').val());
+        const b = parseFloat($('#angka2').val());
+        const op = $('#operator').val();
+        let res = 0;
+
+        if (isNaN(a) || isNaN(b)) {
+            res = 'Input salah!';
+        } else {
+            switch(op) {
+                case '+': res = a + b; break;
+                case '-': res = a - b; break;
+                case '*': res = a * b; break;
+                case '/': res = b !== 0 ? a / b : 'Error (bagi 0)'; break;
+            }
+        }
+
+        $('#hasil').text(res);
+        console.log('Hasil kalkulasi:', res);
+    });
+
 });
